@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.API", "BitBasket.ProductService.API\BitBasket.ProductService.API.csproj", "{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.DataAccess", "BitBasket.ProductService.DataAccess\BitBasket.ProductService.DataAccess.csproj", "{30876A48-A502-47C4-AC3B-4C7603651904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.BusinessLogic", "BitBasket.ProductService.BusinessLogic\BitBasket.ProductService.BusinessLogic.csproj", "{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30876A48-A502-47C4-AC3B-4C7603651904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30876A48-A502-47C4-AC3B-4C7603651904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30876A48-A502-47C4-AC3B-4C7603651904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30876A48-A502-47C4-AC3B-4C7603651904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B28821AE-4CDA-46DC-B312-18A0CFC69439}
+	EndGlobalSection
+EndGlobal
