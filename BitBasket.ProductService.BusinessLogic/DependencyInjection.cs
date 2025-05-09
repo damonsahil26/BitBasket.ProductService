@@ -1,4 +1,5 @@
-﻿using BitBasket.ProductService.DataAccess;
+﻿using BitBasket.ProductService.BusinessLogic.Mappers;
+using BitBasket.ProductService.DataAccess;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace BitBasket.ProductService.BusinessLogic
     {
         public static IServiceCollection AddBusinessLogicServices(this IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(ProductMappingProfile).Assembly);
             return services;
         }
     }

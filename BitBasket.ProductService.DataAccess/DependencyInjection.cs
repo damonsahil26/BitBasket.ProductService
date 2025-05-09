@@ -1,4 +1,6 @@
 ﻿using BitBasket.ProductService.DataAccess.AppDbContext;
+using BitBasket.ProductService.DataAccess.Repositories;
+using BitBasket.ProductService.DataAccess.RepositoryContracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,8 @@ namespace BitBasket.ProductService.DataAccess
         {
             services.AddDbContext<ApplicationDbContext>(options => 
             options.UseMySQL(configuration.GetConnectionString("DefaultConnection")!));
+
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;
         }
