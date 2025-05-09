@@ -7,12 +7,12 @@ using System.Linq.Expressions;
 
 namespace BitBasket.ProductService.BusinessLogic.Services
 {
-    public class ProductService : IProductService
+    public class AppProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public AppProductService(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _mapper = mapper;

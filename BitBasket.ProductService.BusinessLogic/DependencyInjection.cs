@@ -1,11 +1,9 @@
 ﻿using BitBasket.ProductService.BusinessLogic.Mappers;
-using BitBasket.ProductService.DataAccess;
+using BitBasket.ProductService.BusinessLogic.ServiceContracts;
+using BitBasket.ProductService.BusinessLogic.Services;
+using BitBasket.ProductService.BusinessLogic.Validators;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BitBasket.ProductService.BusinessLogic
 {
@@ -14,6 +12,8 @@ namespace BitBasket.ProductService.BusinessLogic
         public static IServiceCollection AddBusinessLogicServices(this IServiceCollection services)
         {
             services.AddAutoMapper(typeof(ProductMappingProfile).Assembly);
+            services.AddScoped<IProductService, AppProductService>();
+            services.AddValidatorsFromAssemblyContaining(typeof(ProductAddRequestValidator));
             return services;
         }
     }
