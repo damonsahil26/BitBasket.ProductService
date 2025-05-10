@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  mysql-container:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: BitBasket_ProductsDb
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./Docker/mysql_init:/docker-entrypoint-initdb.d
+    networks:
+      - products-network
+    hostname: mysql-container
+  
+  product-microservice:
+    image: damonsahil26/ecommerce-product-microservice:latest
+    environment:
+      MYSQL_PASSWORD: admin
+      MYSQL_HOST: mysql-container
+    ports: 
+      - 8080:8080
+    networks:
+      - products-network
+            
+networks:
+ products-network:
+  driver: bridge

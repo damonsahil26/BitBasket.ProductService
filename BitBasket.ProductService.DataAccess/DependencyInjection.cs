@@ -17,8 +17,14 @@ namespace BitBasket.ProductService.DataAccess
         public static IServiceCollection AddDataAccessServices(this IServiceCollection services,
             IConfiguration configuration)
         {
+            var sqlConnectionStringTemplate = configuration.GetConnectionString("DefaultConnection")!;
+
+            var sqlConnectionString = sqlConnectionStringTemplate
+                .Replace("$MYSQL_HOST", Environment.GetEnvironmentVariable("MYSQL_HOST"))
+                .Replace("$MYSQL_PASSWORD", Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
+
             services.AddDbContext<ApplicationDbContext>(options => 
-            options.UseMySQL(configuration.GetConnectionString("DefaultConnection")!));
+            options.UseMySQL(sqlConnectionString));
 
             services.AddScoped<IProductRepository, ProductRepository>();
 

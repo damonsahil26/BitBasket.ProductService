@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.API", "BitBasket.ProductService.API\BitBasket.ProductService.API.csproj", "{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBasket.ProductService.API", "BitBasket.ProductService.API\BitBasket.ProductService.API.csproj", "{A56BCF6C-599B-4A27-BFBA-CEA331CB48E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.DataAccess", "BitBasket.ProductService.DataAccess\BitBasket.ProductService.DataAccess.csproj", "{30876A48-A502-47C4-AC3B-4C7603651904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBasket.ProductService.DataAccess", "BitBasket.ProductService.DataAccess\BitBasket.ProductService.DataAccess.csproj", "{30876A48-A502-47C4-AC3B-4C7603651904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBasket.ProductService.BusinessLogic", "BitBasket.ProductService.BusinessLogic\BitBasket.ProductService.BusinessLogic.csproj", "{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBasket.ProductService.BusinessLogic", "BitBasket.ProductService.BusinessLogic\BitBasket.ProductService.BusinessLogic.csproj", "{8B1B910A-23BD-4E1D-89B5-C4C67A605D9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{FDFD7E0C-1E44-41A9-A8F1-CF239BD9DF22}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql_init", "mysql_init", "{FF0DC4C3-3017-4B04-BB84-786B5A4DB266}"
+	ProjectSection(SolutionItems) = preProject
+		init.sql = init.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +40,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF0DC4C3-3017-4B04-BB84-786B5A4DB266} = {FDFD7E0C-1E44-41A9-A8F1-CF239BD9DF22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B28821AE-4CDA-46DC-B312-18A0CFC69439}
