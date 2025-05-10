@@ -1,3 +1,4 @@
+using BitBasket.ProductService.API.APIEndpoints;
 using BitBasket.ProductService.API.Middlewares;
 using BitBasket.ProductService.BusinessLogic;
 using BitBasket.ProductService.DataAccess;
@@ -27,5 +28,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.AddProductApiEndpoints();
 
 app.Run();

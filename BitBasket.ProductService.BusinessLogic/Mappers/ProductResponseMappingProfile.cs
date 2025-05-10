@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BitBasket.ProductService.BusinessLogic.DTO;
+using BitBasket.ProductService.BusinessLogic.Enums;
 using BitBasket.ProductService.DataAccess.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace BitBasket.ProductService.BusinessLogic.Mappers
             CreateMap<ProductResponse, Product>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.ProductName));
 
-            CreateMap<ProductResponse, Product>()
+            CreateMap<Product, ProductResponse>()
                 .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category));
 
             CreateMap<ProductResponse, Product>()

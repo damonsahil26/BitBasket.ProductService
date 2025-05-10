@@ -11,7 +11,7 @@ namespace BitBasket.ProductService.BusinessLogic.DTO
     {
         public Guid ProductId { get; set; }
         public string ProductName { get; set; } = string.Empty;
-        public CategoryOptions Category { get; set; }
+        public string Category { get; set; }
         public double? UnitPrice { get; set; }
         public int? QuantityInStock { get; set; }
     }
